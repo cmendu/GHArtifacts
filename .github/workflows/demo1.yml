@@ -13,6 +13,8 @@ jobs:
         run: npm ci
       - name: Lint code
         run: npm run lint
+      - name: Publish JS filename
+        run: find dist/assets/*.js -type f -execdir echo '{}' ';'
       - name: Test code
         run: npm run test
   build:
